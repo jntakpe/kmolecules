@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.types
+package com.github.jntakpe.kmolecules.ddd.types
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

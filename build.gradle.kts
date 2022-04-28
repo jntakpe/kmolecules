@@ -8,7 +8,7 @@ plugins {
     signing
 }
 
-group = "org.kmolecules"
+group = "com.github.jntakpe"
 version = "1.0.0-RC1"
 
 repositories {

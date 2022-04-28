@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.types
+package com.github.jntakpe.kmolecules.ddd.types
 
 /**
  * Marker interface for identifiers. Exists primarily to easily identify types that are supposed to be identifiers

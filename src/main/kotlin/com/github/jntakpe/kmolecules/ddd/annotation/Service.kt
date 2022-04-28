@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.annotation
+package com.github.jntakpe.kmolecules.ddd.annotation
 
 /**
  * Identifies a domain [Service]. A service is a significant process or transformation in the domain that is not a

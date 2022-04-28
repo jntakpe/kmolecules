@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.annotation
+package com.github.jntakpe.kmolecules.ddd.annotation
 
 /**
  * Identifies an aggregate root, i.e. the root entity of an aggregate. An aggregate forms a cluster of consistent rules

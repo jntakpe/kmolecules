@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.types
+package com.github.jntakpe.kmolecules.ddd.types
 
 /**
  * Identifies a [Repository]. Repositories simulate a collection of aggregates to which aggregate instances can be

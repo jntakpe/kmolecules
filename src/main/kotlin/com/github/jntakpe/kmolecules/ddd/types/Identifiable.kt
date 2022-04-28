@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.types
+package com.github.jntakpe.kmolecules.ddd.types
 
 /**
  * An identifiable type, i.e. anything that exposes an [Identifier].

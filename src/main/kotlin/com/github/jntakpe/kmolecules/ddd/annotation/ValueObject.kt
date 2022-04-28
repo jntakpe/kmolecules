@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.annotation
+package com.github.jntakpe.kmolecules.ddd.annotation
 
 /**
  * Identifies a value object. Domain concepts that are modeled as value objects have no conceptual identity or

@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.annotation
+package com.github.jntakpe.kmolecules.ddd.annotation
 
 /**
  * Identifies a [Factory]. Factories encapsulate the responsibility of creating complex objects in general and

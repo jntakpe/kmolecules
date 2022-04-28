@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.types
+package com.github.jntakpe.kmolecules.ddd.types
 
 /**
  * An association to an [AggregateRoot].

@@ -1,4 +1,4 @@
-package org.kmolecules.ddd.types
+package com.github.jntakpe.kmolecules.ddd.types
 
 /**
  * Identifies an [Entity]. Entities represent a thread of continuity and identity, going through a lifecycle,
