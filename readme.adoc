@@ -1,12 +1,12 @@
 = kMolecules – Architectural abstractions for Kotlin and Java
 
-[jMolecules](https://github.com/xmolecules/jmolecules) addon to ease Kotlin integration, all credits goes to the excellent [jMolecules](https://github.com/xmolecules/jmolecules).
+link:https://github.com/xmolecules/jmolecules[jMolecules] addon to ease Kotlin integration, all credits goes to the excellent link:https://github.com/xmolecules/jmolecules[jMolecules].
 
-The difference between the original [jMolecules](https://github.com/xmolecules/jmolecules) and **kMolecules** is the module [jmolecules-ddd](https://github.com/xmolecules/jmolecules/jmolecules-ddd) that has been implemented to provide a great experience with DDD for Kotlin developers
+The difference between the original link:https://github.com/xmolecules/jmolecules[jMolecules] and **kMolecules** is the module link:https://github.com/xmolecules/jmolecules/jmolecules-ddd[jmolecules-ddd] that has been implemented to provide a great experience with DDD for Kotlin developers
 
 :warning:
 
-️The project will be archived if [this PR](https://github.com/xmolecules/jmolecules/pull/52) is accepted.
+️The project will be archived if link:https://github.com/xmolecules/jmolecules/pull/52[this PR] is accepted.
 
 A set of libraries to help developers work with architectural concepts in Kotlin and Java.
 Goals:
@@ -60,9 +60,9 @@ This arrangement gives guidance to modeling and allows to easily verify the foll
 
 == jMolecules additional libraries
 
-[jMolecules](https://github.com/xmolecules/jmolecules#available-libraries-1) provides additional libraries that work off the shelf perfectly with Kotlin.
+link:https://github.com/xmolecules/jmolecules#available-libraries-1[jMolecules] provides additional libraries that work off the shelf perfectly with Kotlin.
 
-=== Libraries
+=== Libraries (from jMolecules)
 
 * link:jmolecules-architecture[`jmolecules-architecture`] -- annotations to express architectural styles in code.
 ** link:jmolecules-architecture/jmolecules-cqrs-architecture[`jmolecules-cqrs-architecture`] -- CQRS architecture
@@ -94,7 +94,7 @@ To use kMolecules in your project just install it from the Maven central reposit
 
 [source,groovy]
 ----
-compile("org.kmolecules:kmolecules-ddd:1.0.0")
+compile("com.github.jntakpe:kmolecules:1.0.0-RC1")
 ----
 
 === Maven
@@ -102,8 +102,8 @@ compile("org.kmolecules:kmolecules-ddd:1.0.0")
 [source,xml]
 ----
 <dependency>
-  <groupId>org.kmolecules</groupId>
-  <artifactId>kmolecules-ddd</artifactId>
-  <version>1.0.0</version>
+  <groupId>com.github.jntakpe</groupId>
+  <artifactId>kmolecules</artifactId>
+  <version>1.0.0-RC1</version>
 </dependency>
 ----
