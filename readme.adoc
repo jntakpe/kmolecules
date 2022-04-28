@@ -1,0 +1,109 @@
+= kMolecules – Architectural abstractions for Kotlin and Java
+
+[jMolecules](https://github.com/xmolecules/jmolecules) addon to ease Kotlin integration, all credits goes to the excellent [jMolecules](https://github.com/xmolecules/jmolecules).
+
+The difference between the original [jMolecules](https://github.com/xmolecules/jmolecules) and **kMolecules** is the module [jmolecules-ddd](https://github.com/xmolecules/jmolecules/jmolecules-ddd) that has been implemented to provide a great experience with DDD for Kotlin developers
+
+:warning:
+
+️The project will be archived if [this PR](https://github.com/xmolecules/jmolecules/pull/52) is accepted.
+
+A set of libraries to help developers work with architectural concepts in Kotlin and Java.
+Goals:
+
+* Express that a piece of code (package, class, method...) implements an architectural concept.
+* Make it easy for the human reader to determine what kind of architectural concepts a given piece of code is.
+* Allow tool integration (to do interesting stuff like generating persistence or static architecture analysis to check for validations of the architectural rules.)
+
+== Expressing DDD concepts
+
+Example:
+
+[source,kotlin]
+----
+import org.kmolecules.ddd.annotation.*;
+
+@Entity
+class BankAccount { /* ... */ }
+
+@ValueObject
+class Currency { /* ... */ }
+
+@Repository
+class Accounts { /* ... */ }
+----
+
+When we take Ubiquitous Language serious, we want names (for classes, methods, etc.) that only contain words from the domain language.
+That means the titles of the building blocks should not be part of the names.
+So in a banking domain we don't want `BankAccountEntity`, `CurrencyVO` or even `AccountRepository` as types.
+Instead, we want `BankAccount`, `Currency` and `Accounts` – like in the example above.
+
+Still, we want to express that a given class (or other architectural element) is a special building block; i.e. uses a design pattern.
+kMolecules provide a set of standard annotations for the building blocks known from DDD.
+
+=== Using a type based model
+
+As an alternative to the above-mentioned annotations, kMolecules also provides a set of interfaces, largely based on the ideas presented in John Sullivan's series https://scabl.blogspot.com/p/advancing-enterprise-ddd.html["Advancing Enterprise DDD"].
+They allow expressing relationships between the building blocks right within the type system, so that the compiler can help to verify model correctness and the information can also be processed by Java reflection more easily.
+
+* `Identifier` -- A type to represent types that are supposed to act as identifiers.
+* `Identifiable<ID>` -- Anything that's exposing an identifier.
+* `Entity<T : AggregateRoot<T, *>, ID> : Identifiable<ID>` -- An entity, declaring to which `AggregateRoot` it belongs and which identifier it exposes.
+* `AggregateRoot<T : AggregateRoot<T, ID>, ID : Identifier> : Entity<T, ID>` -- an aggregate root being an `Entity` belonging to itself exposing a dedicated `Identifier`
+* `Association<T : AggregateRoot<T, ID>, ID : Identifier> : Identifiable<ID>` -- an explicit association to a target `AggregateRoot`.
+
+This arrangement gives guidance to modeling and allows to easily verify the following rules, potentially via reflection:
+
+* Enforced, dedicated identifier types per aggregate to avoid identifiers for different aggregates mixed up.
+* `AggregateRoot` must only refer to `Entity` instances that were declared to belong to it.
+* ``AggregateRoot``s and ``Entity``s must only refer to other `AggregateRoots` via `Association` instances.
+
+== jMolecules additional libraries
+
+[jMolecules](https://github.com/xmolecules/jmolecules#available-libraries-1) provides additional libraries that work off the shelf perfectly with Kotlin.
+
+=== Libraries
+
+* link:jmolecules-architecture[`jmolecules-architecture`] -- annotations to express architectural styles in code.
+** link:jmolecules-architecture/jmolecules-cqrs-architecture[`jmolecules-cqrs-architecture`] -- CQRS architecture
+*** `@Command`
+*** `@CommandDispatcher`
+*** `@CommandHandler`
+*** `@QueryModel`
+** link:jmolecules-architecture/jmolecules-layered-architecture[`jmolecules-layered-architecture`] -- Layered architecture
+*** `@DomainLayer`
+*** `@ApplicationLayer`
+*** `@InfrastructureLayer`
+*** `@InterfaceLayer`
+** link:jmolecules-architecture/jmolecules-onion-architecture[`jmolecules-onion-architecture`] -- Onion architecture
+*** **Classic**
+**** `@DomainModelRing`
+**** `@DomainServiceRing`
+**** `@ApplicationServiceRing`
+**** `@InfrastructureRing`
+*** **Simplified** (does not separate domain model and services)
+**** `@DomainRing`
+**** `@ApplicationRing`
+**** `@InfrastructureRing`
+
+== Installation
+
+To use kMolecules in your project just install it from the Maven central repository.
+
+=== Gradle
+
+[source,groovy]
+----
+compile("org.kmolecules:kmolecules-ddd:1.0.0")
+----
+
+=== Maven
+
+[source,xml]
+----
+<dependency>
+  <groupId>org.kmolecules</groupId>
+  <artifactId>kmolecules-ddd</artifactId>
+  <version>1.0.0</version>
+</dependency>
+----
