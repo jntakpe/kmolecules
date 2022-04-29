@@ -94,7 +94,7 @@ To use kMolecules in your project just install it from the Maven central reposit
 
 [source,groovy]
 ----
-compile("com.github.jntakpe:kmolecules:1.0.0-RC2")
+compile("com.github.jntakpe:kmolecules:1.0.0-RC3")
 ----
 
 === Maven
@@ -104,6 +104,6 @@ compile("com.github.jntakpe:kmolecules:1.0.0-RC2")
 <dependency>
   <groupId>com.github.jntakpe</groupId>
   <artifactId>kmolecules</artifactId>
-  <version>1.0.0-RC2</version>
+  <version>1.0.0-RC3</version>
 </dependency>
 ----
