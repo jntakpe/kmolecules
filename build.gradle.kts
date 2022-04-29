@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.github.jntakpe"
-version = "1.0.0-RC1"
+version = "1.0.0-RC2"
 
 repositories {
     mavenCentral()
