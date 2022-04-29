@@ -18,5 +18,5 @@ package com.github.jntakpe.kmolecules.ddd.annotation
 @Entity
 @Retention
 @MustBeDocumented
-@Target(AnnotationTarget.TYPE)
+@Target(AnnotationTarget.CLASS)
 annotation class AggregateRoot

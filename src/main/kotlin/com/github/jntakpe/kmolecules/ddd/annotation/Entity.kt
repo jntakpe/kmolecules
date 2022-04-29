@@ -14,5 +14,5 @@ package com.github.jntakpe.kmolecules.ddd.annotation
  */
 @Retention
 @MustBeDocumented
-@Target(AnnotationTarget.TYPE, AnnotationTarget.CLASS)
+@Target(AnnotationTarget.CLASS)
 annotation class Entity

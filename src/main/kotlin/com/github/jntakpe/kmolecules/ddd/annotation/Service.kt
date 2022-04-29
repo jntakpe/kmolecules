@@ -13,5 +13,5 @@ package com.github.jntakpe.kmolecules.ddd.annotation
  */
 @Retention
 @MustBeDocumented
-@Target(AnnotationTarget.TYPE)
+@Target(AnnotationTarget.CLASS)
 annotation class Service
