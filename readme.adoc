@@ -1,5 +1,7 @@
 = kMolecules – Architectural abstractions for Kotlin and Java
 
+=== The project will be archived soon since [jMolecules supports Kotlin](https://github.com/xmolecules/jmolecules/issues/51)
+
 link:https://github.com/xmolecules/jmolecules[jMolecules] addon to ease Kotlin integration, all credits goes to the excellent link:https://github.com/xmolecules/jmolecules[jMolecules].
 
 The difference between the original link:https://github.com/xmolecules/jmolecules[jMolecules] and **kMolecules** is the module link:https://github.com/xmolecules/jmolecules/jmolecules-ddd[jmolecules-ddd] that has been implemented to provide a great experience with DDD for Kotlin developers
