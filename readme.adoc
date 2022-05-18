@@ -1,6 +1,6 @@
 = kMolecules – Architectural abstractions for Kotlin and Java
 
-=== The project will be archived soon since [jMolecules supports Kotlin](https://github.com/xmolecules/jmolecules/issues/51)
+=== The project will be archived soon since link:https://github.com/xmolecules/jmolecules/issues/51[jMolecules supports Kotlin]
 
 link:https://github.com/xmolecules/jmolecules[jMolecules] addon to ease Kotlin integration, all credits goes to the excellent link:https://github.com/xmolecules/jmolecules[jMolecules].
 
