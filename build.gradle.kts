@@ -15,7 +15,7 @@ repositories {
     mavenCentral()
 }
 
-val junitVersion = "5.9.3"
+val junitVersion = "5.10.0"
 val assertJVersion = "3.24.2"
 
 dependencies {
