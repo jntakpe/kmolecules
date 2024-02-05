@@ -16,7 +16,7 @@ repositories {
 }
 
 val junitVersion = "5.10.1"
-val assertJVersion = "3.24.2"
+val assertJVersion = "3.25.3"
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:$junitVersion"))
